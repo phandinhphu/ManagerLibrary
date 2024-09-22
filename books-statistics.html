@@ -63,7 +63,7 @@
 									>Dashboard</a
 								>
 							</li>
-							<li class="sidebar__item selected">
+							<li class="sidebar__item">
 								<a
 									class="sidebar__item-link"
 									href="./request.html"
@@ -135,17 +135,17 @@
 									</li>
 								</ul>
 							</li>
-							<li class="sidebar__item">
+							<li class="sidebar__item selected">
 								<div
 									class="sidebar__item-link"
 									href="./index.html"
 								>
 									Thống kê
 									<i
-										class="fa-solid fa-caret-right icon no-rotate"
+										class="fa-solid fa-caret-right icon rotate"
 									></i>
 								</div>
-								<ul class="sidebar__sub-items">
+								<ul class="sidebar__sub-items sidebar__sub-items--active">
 									<li class="sidebar__sub-item">
 										<a
 											class="sidebar__sub-item-link"
@@ -176,7 +176,13 @@
 				</div>
 				<div class="content">
 					<div class="content__header">
-						<h1 class="content__header-title">Yêu cầu mượn sách</h1>
+                        <div class="card card--success text-center shadow-sm" style="width: 18rem">
+                            <div class="card-body">
+                                <h5 class="card-title">Tổng số sách</h5>
+                                <p class="card-text display-4 fw-bold text-success">1500</p>
+                                <i class="bi bi-person-fill text-success" style="font-size: 2rem;"></i>
+                            </div>
+                        </div>
 					</div>
 
 					<div class="content__body">
@@ -185,8 +191,14 @@
 								<div class="card card--info">
 									<div class="card__header">
 										<h3 class="card__header-title">
-											List request borrow book
+											Thống kê books
 										</h3>
+
+                                        <button
+                                            class="btn btn--info"
+                                        >
+                                            <i class="fa-solid fa-file-export"></i>
+                                        </button>
 									</div>
 									<div class="card__body">
 										<form class="form__filter" action="">
@@ -194,7 +206,7 @@
 												<label
 													for="book_name"
 													class="form__filter-label"
-													>Tên độc giả</label
+													>Tên sách</label
 												>
 												<input
 													type="text"
@@ -219,64 +231,91 @@
 											<thead>
 												<tr>
 													<th>STT</th>
-													<th>Tên độc giả</th>
 													<th>Tên sách</th>
-													<th>Số lượng</th>
-													<th>Ngày mượn</th>
-													<th>Ngày trả</th>
-													<th>Phê duyệt</th>
+													<th>Tên tác giả</th>
+													<th>Thể loại</th>
+													<th>Số lần mượn</th>
+                                                    <th>Số lượng còn lại</th>
+                                                    <th>Thao tác</th>
 												</tr>
 											</thead>
-                                            <tbody>
-                                                <tr>
+											<tbody>
+												<tr>
                                                     <td>1</td>
-                                                    <td>Nguyễn Văn A</td>
                                                     <td>Harry Potter</td>
-													<td>2 cuốn</td>
-                                                    <td>01/01/2021</td>
-                                                    <td>01/02/2021</td>
+                                                    <td>JK Rowling</td>
+                                                    <td>Truyện tranh</td>
+                                                    <td>10</td>
+                                                    <td>20</td>
                                                     <td>
-                                                        <a href="#" class="btn">
-                                                            <i class="fa-regular fa-circle-check"></i>
-                                                        </a>
-                                                        <a href="#" class="btn btn__action--delete">
-                                                            <i class="fa-solid fa-ban"></i>
-                                                        </a>
+                                                        <button
+                                                            class="btn btn--info"
+                                                        >
+                                                            <i class="fa-solid fa-file-export"></i>
+                                                        </button>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>2</td>
-                                                    <td>Nguyễn Văn B</td>
                                                     <td>Harry Potter</td>
-													<td>2 cuốn</td>
-                                                    <td>01/01/2021</td>
-                                                    <td>01/02/2021</td>
+                                                    <td>JK Rowling</td>
+                                                    <td>Truyện tranh</td>
+                                                    <td>10</td>
+                                                    <td>20</td>
                                                     <td>
-                                                        <a href="#" class="btn">
-                                                            <i class="fa-regular fa-circle-check"></i>
-                                                        </a>
-                                                        <a href="#" class="btn btn__action--delete">
-                                                            <i class="fa-solid fa-ban"></i>
-                                                        </a>
+                                                        <button
+                                                            class="btn btn--info"
+                                                        >
+                                                            <i class="fa-solid fa-file-export"></i>
+                                                        </button>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>3</td>
-                                                    <td>Nguyễn Văn C</td>
                                                     <td>Harry Potter</td>
-													<td>2 cuốn</td>
-                                                    <td>01/01/2021</td>
-                                                    <td>01/02/2021</td>
+                                                    <td>JK Rowling</td>
+                                                    <td>Truyện tranh</td>
+                                                    <td>10</td>
+                                                    <td>20</td>
                                                     <td>
-                                                        <a href="#" class="btn">
-                                                            <i class="fa-regular fa-circle-check"></i>
-                                                        </a>
-                                                        <a href="#" class="btn btn__action--delete">
-                                                            <i class="fa-solid fa-ban"></i>
-                                                        </a>
+                                                        <button
+                                                            class="btn btn--info"
+                                                        >
+                                                            <i class="fa-solid fa-file-export"></i>
+                                                        </button>
                                                     </td>
                                                 </tr>
-                                            </tbody>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>Harry Potter</td>
+                                                    <td>JK Rowling</td>
+                                                    <td>Truyện tranh</td>
+                                                    <td>10</td>
+                                                    <td>20</td>
+                                                    <td>
+                                                        <button
+                                                            class="btn btn--info"
+                                                        >
+                                                            <i class="fa-solid fa-file-export"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>Harry Potter</td>
+                                                    <td>JK Rowling</td>
+                                                    <td>Truyện tranh</td>
+                                                    <td>10</td>
+                                                    <td>20</td>
+                                                    <td>
+                                                        <button
+                                                            class="btn btn--info"
+                                                        >
+                                                            <i class="fa-solid fa-file-export"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+											</tbody>
 										</table>
 
 										<div class="pagination">
@@ -320,13 +359,55 @@
 									</div>
 								</div>
 							</div>
+
+                            <div class="grCol grL-12">
+								<div class="card card--warning">
+									<div class="card__header">
+										<h3 class="card__header-title">
+											Biểu đố tổng số lượng mượn sách
+										</h3>
+									</div>
+									<div class="card__body">
+										<form class="form__filter" action="">
+											<div class="form__filter-group">
+												<label
+													for="year"
+													class="form__filter-label"
+													>Năm</label
+												>
+												<input
+													type="number"
+													name="year"
+													id="year"
+													class="form__filter-input"
+												/>
+											</div>
+											<div class="form__filter-group">
+												<button
+													type="submit"
+													class="btn"
+												>
+													Tra cứu
+												</button>
+											</div>
+											<div class="form__filter-group">
+												<a href="#" class="btn">Hủy</a>
+											</div>
+										</form>
+										<div>
+                                            <canvas id="myChart"></canvas>
+                                        </div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-
+        
 		<script src="../assets/js/main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 		<script
 			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
 			integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -344,5 +425,52 @@
 			crossorigin="anonymous"
 		></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+        <script>
+            const ctx = document.getElementById('myChart');
+        
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: [
+                        'Tháng 1', 
+                        'Tháng 2', 
+                        'Tháng 3', 
+                        'Tháng 4', 
+                        'Tháng 5', 
+                        'Tháng 6',
+                        'Tháng 7',
+                        'Tháng 8',
+                        'Tháng 9',
+                        'Tháng 10',
+                        'Tháng 11',
+                        'Tháng 12',
+                    ],
+                    datasets: [{
+                        label: 'Số lượng mượn sách',
+                        data: [12, 19, 3, 5, 2, 3],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Năm 2020',
+                                color: '#000',
+                                font: {
+                                    size: 16,
+                                    weight: 'bold'
+                                }
+                            }
+                        },
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        </script>
 	</body>
 </html>
