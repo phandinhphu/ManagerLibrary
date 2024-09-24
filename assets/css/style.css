@@ -128,7 +128,6 @@ a:hover {
     width: 250px;
     height: 565px;
     padding: 20px 0 26px 8px;
-    border-right: 2px solid var(--color-white);
     background-color: var(--color-hover);
     color: var(--text-color);
     transition: transform 0.3s ease;
@@ -470,6 +469,7 @@ a:hover {
 	justify-content: center;
 	align-items: center;
 	padding: 1rem 2rem;
+    margin: 0 -20px;
 	background-color: var(--color-primary);
 	color: #fff;
 	font-size: 1.4rem;
