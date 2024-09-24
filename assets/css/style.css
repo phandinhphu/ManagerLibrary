@@ -463,3 +463,39 @@ a:hover {
 .btn__action--delete:hover {
     background-color: #c82333;
 }
+
+.footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem 2rem;
+	background-color: var(--color-primary);
+	color: #fff;
+	font-size: 1.4rem;
+	height: 80px;
+}
+
+.contact {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 8px;
+	list-style: none;
+}
+
+.contact__item {
+	margin: 0 8px;
+}
+
+.contact__item-icon {
+	display: block;
+	color: var(--color-white);
+	font-size: 24px;
+	padding: 8px 12px;
+}
+
+.contact__item-icon:hover {
+	text-decoration: none;
+	color: #000;
+}
