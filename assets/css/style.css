@@ -479,6 +479,10 @@ a:hover {
 	height: 80px;
 }
 
+.footer.login {
+    margin: 0;
+}
+
 .contact {
 	display: flex;
 	justify-content: center;
@@ -501,4 +505,55 @@ a:hover {
 .contact__item-icon:hover {
 	text-decoration: none;
 	color: #000;
+}
+
+/* Login */
+.container__login {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100vh - var(--default-header-height));
+    width: 100%;
+}
+
+.container__login > form {
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+#form-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    width: 350px;
+    background-color: #fff;
+}
+
+#form-login .heading {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.spacer {
+    margin-bottom: 20px;
+}
+
+.form__submit {
+    font-size: 18px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #09db36;
+    color: white;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.form__submit:hover {
+    background-color: #0a9b27;
 }
