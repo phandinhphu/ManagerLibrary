@@ -5,6 +5,8 @@
     --text-hover: #ccc;
     --color-white: #fff;
     --color-black: #000;
+
+    --default-header-height: 87px;
 }
 
 * {
@@ -67,6 +69,7 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 2rem;
+    height: var(--default-header-height);
     background-color: var(--color-primary);
     color: var(--text-color-light);
     border-bottom: 2px solid var(--color-white);
@@ -126,7 +129,7 @@ a:hover {
 
 .sidebar {
     width: 250px;
-    height: 565px;
+    height: 100vh;
     padding: 20px 0 26px 8px;
     background-color: var(--color-hover);
     color: var(--text-color);
@@ -228,7 +231,7 @@ a:hover {
     flex: 1;
     background-color: var(--color-white);
     padding: 2rem 2rem 0 2rem;
-    height: 565px;
+    height: calc(100vh - var(--default-header-height));
     overflow: overlay;
 }
 
