@@ -368,6 +368,13 @@ a:hover {
     margin-bottom: 1.5rem;
 }
 
+.img__book {
+    width: 280px;
+    height: 350px;
+    margin-right: 1.2rem;
+    border: 1px solid var(--color-black);
+}
+
 .form__label {
     font-size: 1.6rem;
     font-weight: 700;

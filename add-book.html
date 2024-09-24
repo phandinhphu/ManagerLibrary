@@ -198,7 +198,7 @@
 													<img
 														src="./assets/imgs/no-image.png"
 														alt=""
-														class="img-thumbnail"
+														class="img__book"
 														title="Image book"
 													/>
 													<input
@@ -410,6 +410,17 @@
 		<script>
 			new Validator("#form").onSubmit = (data) => {
 				console.log(data);
+			};
+		</script>
+		<script>
+			let bookImg = $(".img__book");
+			let inputImg = $("#img_book");
+
+			inputImg.onchange = () => {
+				const [file] = inputImg.files;
+				if (file) {
+					bookImg.src = URL.createObjectURL(file);
+				}
 			};
 		</script>
 		<script
