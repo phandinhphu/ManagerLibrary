@@ -26,6 +26,23 @@
 		/>
 		<link rel="stylesheet" href="./assets/css/grid.css" />
 		<link rel="stylesheet" href="./assets/css/style.css" />
+
+		<style>
+			.text-truncate {
+			  max-width: 150px; /* Adjust the width as needed */
+			}
+
+			.tooltip-inner {
+				font-size: 1.6rem;  /* Tăng kích thước font chữ */
+				padding: 0.8rem;     /* Điều chỉnh khoảng cách */
+			}
+
+			@media (max-width: 63.9375em) {
+				.text-truncate {
+					max-width: 78px; /* Adjust the width as needed */
+				}
+			}
+		</style>
 	</head>
 	<body>
 		<div class="wrapper">
@@ -231,22 +248,44 @@
 											<thead>
 												<tr>
 													<th>STT</th>
-													<th>Tên sách</th>
-													<th>Tên tác giả</th>
-													<th>Thể loại</th>
-													<th>Số lần mượn</th>
-                                                    <th>Số lượng còn lại</th>
-                                                    <th>Thao tác</th>
+													<th>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Tên sách">Tên sách</span>
+													</th>
+													<th>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Tác giả">Tác giả</span>
+													</th>
+													<th>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Thể loại">Thể loại</span>
+													</th>
+													<th>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Số lượng mượn">Số lượng mượn</span>
+													</th>
+                                                    <th>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Số lượng còn">Số lượng còn</span>
+													</th>
+                                                    <th>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Xuất file">Xuất file</span>
+													</th>
 												</tr>
 											</thead>
 											<tbody>
 												<tr>
                                                     <td>1</td>
-                                                    <td>Harry Potter</td>
-                                                    <td>JK Rowling</td>
-                                                    <td>Truyện tranh</td>
-                                                    <td>10</td>
-                                                    <td>20</td>
+                                                    <td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Harry Potter và Hòn Đá Phù Thủy">Harry Potter và Hòn Đá Phù Thủy</span>
+													</td>
+                                                    <td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="J.K.Rowling">J.K.Rowling</span>
+													</td>
+                                                    <td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Truyện tranh">Truyện tranh</span>
+													</td>
+                                                    <td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="10">10</span>
+													</td>
+                                                    <td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="10">10</span>
+													</td>
                                                     <td>
                                                         <button
                                                             class="btn btn--info"
@@ -257,11 +296,21 @@
                                                 </tr>
                                                 <tr>
                                                     <td>2</td>
-                                                    <td>Harry Potter</td>
-                                                    <td>JK Rowling</td>
-                                                    <td>Truyện tranh</td>
-                                                    <td>10</td>
-                                                    <td>20</td>
+                                                    <td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Harry Potter và Hòn Đá Phù Thủy">Harry Potter và Hòn Đá Phù Thủy</span>
+													</td>
+                                                    <td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="J.K.Rowling">J.K.Rowling</span>
+													</td>
+                                                    <td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Truyện tranh">Truyện tranh</span>
+													</td>
+                                                    <td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="10">10</span>
+													</td>
+                                                    <td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="10">10</span>
+													</td>
                                                     <td>
                                                         <button
                                                             class="btn btn--info"
@@ -272,11 +321,21 @@
                                                 </tr>
                                                 <tr>
                                                     <td>3</td>
-                                                    <td>Harry Potter</td>
-                                                    <td>JK Rowling</td>
-                                                    <td>Truyện tranh</td>
-                                                    <td>10</td>
-                                                    <td>20</td>
+                                                    <td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Harry Potter và Hòn Đá Phù Thủy">Harry Potter và Hòn Đá Phù Thủy</span>
+													</td>
+                                                    <td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="J.K.Rowling">J.K.Rowling</span>
+													</td>
+                                                    <td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Truyện tranh">Truyện tranh</span>
+													</td>
+                                                    <td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="10">10</span>
+													</td>
+                                                    <td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="10">10</span>
+													</td>
                                                     <td>
                                                         <button
                                                             class="btn btn--info"
@@ -287,11 +346,21 @@
                                                 </tr>
                                                 <tr>
                                                     <td>4</td>
-                                                    <td>Harry Potter</td>
-                                                    <td>JK Rowling</td>
-                                                    <td>Truyện tranh</td>
-                                                    <td>10</td>
-                                                    <td>20</td>
+                                                    <td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Harry Potter và Hòn Đá Phù Thủy">Harry Potter và Hòn Đá Phù Thủy</span>
+													</td>
+                                                    <td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="J.K.Rowling">J.K.Rowling</span>
+													</td>
+                                                    <td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Truyện tranh">Truyện tranh</span>
+													</td>
+                                                    <td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="10">10</span>
+													</td>
+                                                    <td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="10">10</span>
+													</td>
                                                     <td>
                                                         <button
                                                             class="btn btn--info"
@@ -302,11 +371,21 @@
                                                 </tr>
                                                 <tr>
                                                     <td>5</td>
-                                                    <td>Harry Potter</td>
-                                                    <td>JK Rowling</td>
-                                                    <td>Truyện tranh</td>
-                                                    <td>10</td>
-                                                    <td>20</td>
+                                                    <td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Harry Potter và Hòn Đá Phù Thủy">Harry Potter và Hòn Đá Phù Thủy</span>
+													</td>
+                                                    <td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="J.K.Rowling">J.K.Rowling</span>
+													</td>
+                                                    <td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Truyện tranh">Truyện tranh</span>
+													</td>
+                                                    <td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="10">10</span>
+													</td>
+                                                    <td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="10">10</span>
+													</td>
                                                     <td>
                                                         <button
                                                             class="btn btn--info"
@@ -451,6 +530,14 @@
 			crossorigin="anonymous"
 		></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+		<script>
+			// Initialize tooltips
+			var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+			var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+			  return new bootstrap.Tooltip(tooltipTriggerEl)
+			})
+		</script>
 
         <script>
             const ctx = document.getElementById('myChart');

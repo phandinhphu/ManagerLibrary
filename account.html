@@ -26,6 +26,23 @@
 		/>
 		<link rel="stylesheet" href="./assets/css/grid.css" />
 		<link rel="stylesheet" href="./assets/css/style.css" />
+
+		<style>
+			.text-truncate {
+			  max-width: 150px; /* Adjust the width as needed */
+			}
+
+			.tooltip-inner {
+				font-size: 1.6rem;  /* Tăng kích thước font chữ */
+				padding: 0.8rem;     /* Điều chỉnh khoảng cách */
+			}
+
+			@media (max-width: 63.9375em) {
+				.text-truncate {
+					max-width: 78px; /* Adjust the width as needed */
+				}
+			}
+		</style>
 	</head>
 	<body>
 		<div class="wrapper">
@@ -229,20 +246,38 @@
 											<thead>
 												<tr>
 													<th>STT</th>
-													<th>Tên độc giả</th>
-													<th>Email</th>
-													<th>Phone</th>
-													<th>Số CCCD</th>
-													<th>Thao tác</th>
+													<th>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Tên độc giả">Tên độc giả</span>
+													</th>
+													<th>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Email">Email</span>
+													</th>
+													<th>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Số điện thoại">Số điện thoại</span>
+													</th>
+													<th>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Số CCCD">Số CCCD</span>
+													</th>
+													<th>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Hành động">Thao tác</span>
+													</th>
 												</tr>
 											</thead>
 											<tbody>
 												<tr>
 													<td>1</td>
-													<td>Nguyễn Văn A</td>
-													<td>a@gmail.com</td>
-													<td>0123456789</td>
-													<td>123456789</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nguyễn Văn A">Nguyễn Văn A</span>
+													</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="a@gmail.com">a@gmail.com</span>
+													</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="0123456789">0123456789</span>
+													</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="123456789">123456789</span>
+													</td>
 													<td>
 														<button
 															class="btn__action"
@@ -274,10 +309,18 @@
 												</tr>
 												<tr>
 													<td>2</td>
-													<td>Nguyễn Văn B</td>
-													<td>b@gmail.com</td>
-													<td>0123456789</td>
-													<td>123456789</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nguyễn Văn B">Nguyễn Văn B</span>
+													</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="b@gmail.com">b@gmail.com</span>
+													</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="0123456789">0123456789</span>
+													</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="123456789">123456789</span>
+													</td>
 													<td>
 														<button
 															class="btn__action"
@@ -309,10 +352,18 @@
 												</tr>
 												<tr>
 													<td>3</td>
-													<td>Nguyễn Văn C</td>
-													<td>c@gmail.com</td>
-													<td>0123456789</td>
-													<td>123456789</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nguyễn Văn C">Nguyễn Văn C</span>
+													</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="c@gmail.com">c@gmail.com</span>
+													</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="0123456789">0123456789</span>
+													</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="123456789">123456789</span>
+													</td>
 													<td>
 														<button
 															class="btn__action"
@@ -344,10 +395,18 @@
 												</tr>
 												<tr>
 													<td>4</td>
-													<td>Nguyễn Văn D</td>
-													<td>d@gmail.com</td>
-													<td>0123456789</td>
-													<td>123456789</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nguyễn Văn D">Nguyễn Văn D</span>
+													</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="d@gmail.com">d@gmail.com</span>
+													</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="0123456789">0123456789</span>
+													</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="123456789">123456789</span>
+													</td>
 													<td>
 														<button
 															class="btn__action"
@@ -526,6 +585,14 @@
 			crossorigin="anonymous"
 		></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+		<script>
+			// Initialize tooltips
+			var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+			var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+			  return new bootstrap.Tooltip(tooltipTriggerEl)
+			})
+		</script>
 		
 	</body>
 </html>

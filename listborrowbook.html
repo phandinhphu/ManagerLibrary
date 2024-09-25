@@ -26,6 +26,23 @@
 		/>
 		<link rel="stylesheet" href="./assets/css/grid.css" />
 		<link rel="stylesheet" href="./assets/css/style.css" />
+
+		<style>
+			.text-truncate {
+				max-width: 150px; /* Adjust the width as needed */
+			}
+
+			.tooltip-inner {
+				font-size: 1.6rem; /* Tăng kích thước font chữ */
+				padding: 0.8rem; /* Điều chỉnh khoảng cách */
+			}
+
+			@media (max-width: 63.9375em) {
+				.text-truncate {
+					max-width: 78px; /* Adjust the width as needed */
+				}
+			}
+		</style>
 	</head>
 	<body>
 		<div class="wrapper">
@@ -165,7 +182,7 @@
 									</li>
 								</ul>
 							</li>
-							  
+
 							<li class="sidebar__item">
 								<a
 									class="sidebar__item-link"
@@ -221,21 +238,101 @@
 											<thead>
 												<tr>
 													<th>STT</th>
-													<th>Tên độc giả</th>
-													<th>Tên sách</th>
-													<th>Ngày mượn</th>
-													<th>Ngày trả</th>
-													<th>Trạng thái</th>
-													<th>Xác nhận</th>
+													<th>
+														<span
+															class="d-block text-truncate"
+															data-bs-toggle="tooltip"
+															title="Tên độc giả"
+														>
+															Tên độc giả
+														</span>
+													</th>
+													<th>
+														<span
+															class="d-block text-truncate"
+															data-bs-toggle="tooltip"
+															title="Tên sách"
+														>
+															Tên sách
+														</span>
+													</th>
+													<th>
+														<span
+															class="d-block text-truncate"
+															data-bs-toggle="tooltip"
+															title="Ngày mượn"
+														>
+															Ngày mượn
+														</span>
+													</th>
+													<th>
+														<span
+															class="d-block text-truncate"
+															data-bs-toggle="tooltip"
+															title="Ngày hẹn trả"
+														>
+															Ngày trả
+														</span>
+													</th>
+													<th>
+														<span
+															class="d-block text-truncate"
+															data-bs-toggle="tooltip"
+															title="Trạng thái"
+														>
+															Trạng thái
+														</span>
+													</th>
+													<th>
+														<span
+															class="d-block text-truncate"
+															data-bs-toggle="tooltip"
+															title="Thao tác"
+														>
+															Xác nhận
+														</span>
+													</th>
 												</tr>
 											</thead>
 											<tbody>
 												<tr>
 													<td>1</td>
-													<td>Nguyễn Văn A</td>
-													<td>Harry Potter</td>
-													<td>01/01/2021</td>
-													<td>01/02/2021</td>
+													<td>
+														<span
+															class="d-block text-truncate"
+															data-bs-toggle="tooltip"
+															title="Nguyễn Văn A"
+														>
+															Nguyễn Văn A
+														</span>
+													</td>
+													<td>
+														<span
+															class="d-block text-truncate"
+															data-bs-toggle="tooltip"
+															title="Harry Potter"
+														>
+															Harry Potter
+														</span>
+													</td>
+													<td>
+														<span
+															class="d-block text-truncate"
+															data-bs-toggle="tooltip"
+															title="01/01/2021"
+														>
+															01/01/2021
+														</span>
+													</td>
+													<td>
+														<span
+															class="d-block text-truncate"
+															data-bs-toggle="tooltip"
+															title="01/02/2021"
+														>
+															01/02/2021
+														</span>
+													</td>
 													<td>
 														<select
 															name="status"
@@ -262,7 +359,7 @@
 															type="button"
 															class="btn"
 															data-bs-toggle="modal"
-															data-bs-target="#modalSendMail"
+															data-bs-toggle="#modalSendMail"
 														>
 															<i
 																class="fa-solid fa-paper-plane"
@@ -272,10 +369,42 @@
 												</tr>
 												<tr>
 													<td>2</td>
-													<td>Nguyễn Văn B</td>
-													<td>Harry Potter</td>
-													<td>01/01/2021</td>
-													<td>01/02/2021</td>
+													<td>
+														<span
+															class="d-block text-truncate"
+															data-bs-toggle="tooltip"
+															title="Nguyễn Văn B"
+														>
+															Nguyễn Văn B
+														</span>
+													</td>
+													<td>
+														<span
+															class="d-block text-truncate"
+															data-bs-toggle="tooltip"
+															title="Harry Potter"
+														>
+															Harry Potter
+														</span>
+													</td>
+													<td>
+														<span
+															class="d-block text-truncate"
+															data-bs-toggle="tooltip"
+															title="01/01/2021"
+														>
+															01/01/2021
+														</span>
+													</td>
+													<td>
+														<span
+															class="d-block text-truncate"
+															data-bs-toggle="tooltip"
+															title="01/02/2021"
+														>
+															01/02/2021
+														</span>
+													</td>
 													<td>
 														<select
 															name="status"
@@ -302,7 +431,7 @@
 															type="button"
 															class="btn"
 															data-bs-toggle="modal"
-															data-bs-target="#modalSendMail"
+															data-bs-toggle="#modalSendMail"
 														>
 															<i
 																class="fa-solid fa-paper-plane"
@@ -312,10 +441,42 @@
 												</tr>
 												<tr>
 													<td>3</td>
-													<td>Nguyễn Văn C</td>
-													<td>Harry Potter</td>
-													<td>01/01/2021</td>
-													<td>01/02/2021</td>
+													<td>
+														<span
+															class="d-block text-truncate"
+															data-bs-toggle="tooltip"
+															title="Nguyễn Văn C"
+														>
+															Nguyễn Văn C
+														</span>
+													</td>
+													<td>
+														<span
+															class="d-block text-truncate"
+															data-bs-toggle="tooltip"
+															title="Harry Potter"
+														>
+															Harry Potter
+														</span>
+													</td>
+													<td>
+														<span
+															class="d-block text-truncate"
+															data-bs-toggle="tooltip"
+															title="01/01/2021"
+														>
+															01/01/2021
+														</span>
+													</td>
+													<td>
+														<span
+															class="d-block text-truncate"
+															data-bs-toggle="tooltip"
+															title="01/02/2021"
+														>
+															01/02/2021
+														</span>
+													</td>
 													<td>
 														<select
 															name="status"
@@ -342,7 +503,7 @@
 															type="button"
 															class="btn"
 															data-bs-toggle="modal"
-															data-bs-target="#modalSendMail"
+															data-bs-toggle="#modalSendMail"
 														>
 															<i
 																class="fa-solid fa-paper-plane"
@@ -400,7 +561,10 @@
 					<footer class="footer">
 						<ul class="contact">
 							<li class="contact__item">
-								<a class="contact__item-icon" href="https://github.com/phandinhphu">
+								<a
+									class="contact__item-icon"
+									href="https://github.com/phandinhphu"
+								>
 									<i class="fa-brands fa-github"></i>
 								</a>
 							</li>
@@ -450,13 +614,21 @@
 								<label for="title" class="form__label"
 									>Title</label
 								>
-								<textarea name="title" id="title" class="form__input"></textarea>
+								<textarea
+									name="title"
+									id="title"
+									class="form__input"
+								></textarea>
 							</div>
 							<div class="form__group">
 								<label for="title" class="form__label"
 									>Content</label
 								>
-								<textarea name="title" id="title" class="form__input"></textarea>
+								<textarea
+									name="title"
+									id="title"
+									class="form__input"
+								></textarea>
 							</div>
 						</div>
 						<div class="modal-footer">
@@ -494,5 +666,17 @@
 			crossorigin="anonymous"
 		></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+		<script>
+			// Initialize tooltips
+			var tooltipTriggerList = [].slice.call(
+				document.querySelectorAll('[data-bs-toggle="tooltip"]')
+			);
+			var tooltipList = tooltipTriggerList.map(function (
+				tooltipTriggerEl
+			) {
+				return new bootstrap.Tooltip(tooltipTriggerEl);
+			});
+		</script>
 	</body>
 </html>

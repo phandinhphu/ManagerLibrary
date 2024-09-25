@@ -26,6 +26,34 @@
 		/>
 		<link rel="stylesheet" href="./assets/css/grid.css" />
 		<link rel="stylesheet" href="./assets/css/style.css" />
+
+		<style>
+			.text-truncate {
+			  max-width: 150px; /* Adjust the width as needed */
+			}
+
+			.tooltip-inner {
+				font-size: 1.6rem;  /* Tăng kích thước font chữ */
+				padding: 0.8rem;     /* Điều chỉnh khoảng cách */
+			}
+
+			@media (max-width: 63.9375em) {
+				.text-truncate {
+					max-width: 78px; /* Adjust the width as needed */
+				}
+			}
+		</style>
+
+		<style>
+			.text-truncate {
+			  max-width: 68px; /* Adjust the width as needed */
+			}
+
+			.tooltip-inner {
+				font-size: 1.6rem;  /* Tăng kích thước font chữ */
+				padding: 0.8rem;     /* Điều chỉnh khoảng cách */
+			}
+		</style>
 	</head>
 	<body>
 		<div class="wrapper">
@@ -191,37 +219,105 @@
 											<thead>
 												<tr>
 													<th>STT</th>
-													<th>Book name</th>
-													<th>Author</th>
-													<th>Publisher</th>
-													<th>Category</th>
-													<th>Quantity</th>
+													<th>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Name book">
+															Name book
+														</span>
+													</th>
+													<th>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Author">
+															Author
+														</span>
+													</th>
+													<th>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Publisher">
+															Publisher
+														</span>
+													</th>
+													<th>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Category">
+															Category
+														</span>
+													</th>
+													<th>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Quantity">
+															Quantity
+														</span>
+													</th>
 												</tr>
 											</thead>
 											<tbody>
 												<tr>
 													<td>1</td>
 													<td>Book 1</td>
-													<td>Author 1</td>
-													<td>Publisher 1</td>
-													<td>Category 1</td>
-													<td>10</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nội dung rất dài sẽ hiển thị ở đây khi hover vào.">
+															Author 1
+														</span>
+													</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nội dung rất dài sẽ hiển thị ở đây khi hover vào.">
+															Publsher 1
+														</span>
+													</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nội dung rất dài sẽ hiển thị ở đây khi hover vào.">
+															Category 1
+														</span>
+													</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nội dung rất dài sẽ hiển thị ở đây khi hover vào.">
+															10
+														</span>
+													</td>
 												</tr>
 												<tr>
-													<td>2</td>
-													<td>Book 2</td>
-													<td>Author 2</td>
-													<td>Publisher 2</td>
-													<td>Category 2</td>
-													<td>20</td>
+													<td>1</td>
+													<td>Book 1</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nội dung rất dài sẽ hiển thị ở đây khi hover vào.">
+															Author 1
+														</span>
+													</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nội dung rất dài sẽ hiển thị ở đây khi hover vào.">
+															Publsher 1
+														</span>
+													</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nội dung rất dài sẽ hiển thị ở đây khi hover vào.">
+															Kinh dị
+														</span>
+													</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nội dung rất dài sẽ hiển thị ở đây khi hover vào.">
+															10
+														</span>
+													</td>
 												</tr>
 												<tr>
-													<td>3</td>
-													<td>Book 3</td>
-													<td>Author 3</td>
-													<td>Publisher 3</td>
-													<td>Category 3</td>
-													<td>30</td>
+													<td>1</td>
+													<td>Book 1</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nội dung rất dài sẽ hiển thị ở đây khi hover vào.">
+															Author 1
+														</span>
+													</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nội dung rất dài sẽ hiển thị ở đây khi hover vào.">
+															Publsher 1
+														</span>
+													</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nội dung rất dài sẽ hiển thị ở đây khi hover vào.">
+															Category 1
+														</span>
+													</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nội dung rất dài sẽ hiển thị ở đây khi hover vào.">
+															10
+														</span>
+													</td>
 												</tr>
 											</tbody>
 										</table>
@@ -240,37 +336,117 @@
 											<thead>
 												<tr>
 													<th>STT</th>
-													<th>Name reader</th>
-													<th>Name book</th>
-													<th>Expiry date</th>
-													<th>Status</th>
-													<th>Forfeit</th>
+													<th>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Name reader">
+															Name reader
+														</span>
+													</th>
+													<th>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Name book">
+															Name book
+														</span>
+													</th>
+													<th>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Expiry date">
+															Expiry date
+														</span>
+													</th>
+													<th>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Status">
+															Status
+														</span>
+													</th>
+													<th>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Fine">
+															Fine
+														</span>
+													</th>
 												</tr>
 											</thead>
 											<tbody>
 												<tr>
 													<td>1</td>
-													<td>Reader 1</td>
-													<td>Book 1</td>
-													<td>2022-06-30</td>
-													<td>Violated</td>
-													<td>10000</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nội dung rất dài sẽ hiển thị ở đây khi hover vào.">
+															Reader 1
+														</span>
+													</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nội dung rất dài sẽ hiển thị ở đây khi hover vào.">
+															Book 1
+														</span>
+													</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nội dung rất dài sẽ hiển thị ở đây khi hover vào.">
+															2022-06-30
+														</span>
+													</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nội dung rất dài sẽ hiển thị ở đây khi hover vào.">
+															Violated
+														</span>
+													</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nội dung rất dài sẽ hiển thị ở đây khi hover vào.">
+															10000
+														</span>
+													</td>
 												</tr>
 												<tr>
 													<td>2</td>
-													<td>Reader 2</td>
-													<td>Book 2</td>
-													<td>2022-06-30</td>
-													<td>Violated</td>
-													<td>20000</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nội dung rất dài sẽ hiển thị ở đây khi hover vào.">
+															Reader 2
+														</span>
+													</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nội dung rất dài sẽ hiển thị ở đây khi hover vào.">
+															Book 2
+														</span>
+													</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nội dung rất dài sẽ hiển thị ở đây khi hover vào.">
+															2022-06-30
+														</span>
+													</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nội dung rất dài sẽ hiển thị ở đây khi hover vào.">
+															Violated
+														</span>
+													</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nội dung rất dài sẽ hiển thị ở đây khi hover vào.">
+															10000
+														</span>
+													</td>
 												</tr>
 												<tr>
 													<td>3</td>
-													<td>Reader 3</td>
-													<td>Book 3</td>
-													<td>2022-06-30</td>
-													<td>Violated</td>
-													<td>30000</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nội dung rất dài sẽ hiển thị ở đây khi hover vào.">
+															Reader 3
+														</span>
+													</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nội dung rất dài sẽ hiển thị ở đây khi hover vào.">
+															Book 3
+														</span>
+													</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nội dung rất dài sẽ hiển thị ở đây khi hover vào.">
+															2022-06-30
+														</span>
+													</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nội dung rất dài sẽ hiển thị ở đây khi hover vào.">
+															Violated
+														</span>
+													</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nội dung rất dài sẽ hiển thị ở đây khi hover vào.">
+															10000
+														</span>
+													</td>
 												</tr>
 											</tbody>
 										</table>
@@ -289,33 +465,97 @@
 											<thead>
 												<tr>
 													<th>STT</th>
-													<th>Name reader</th>
-													<th>Name book</th>
-													<th>Create date</th>
-													<th>Expiry date</th>
+													<th>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Name reader">
+															Name reader
+														</span>
+													</th>
+													<th>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Name book">
+															Name book
+														</span>
+													</th>
+													<th>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Borrow date">
+															Borrow date
+														</span>
+													</th>
+													<th>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Return date">
+															Return date
+														</span>
+													</th>
 												</tr>
 											</thead>
 											<tbody>
 												<tr>
 													<td>1</td>
-													<td>Reader 1</td>
-													<td>Book 1</td>
-													<td>2022-06-30</td>
-													<td>2022-07-30</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nội dung rất dài sẽ hiển thị ở đây khi hover vào.">
+															Reader 1
+														</span>
+													</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nội dung rất dài sẽ hiển thị ở đây khi hover vào.">
+															Book 1
+														</span>
+													</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nội dung rất dài sẽ hiển thị ở đây khi hover vào.">
+															2022-06-30
+														</span>
+													</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nội dung rất dài sẽ hiển thị ở đây khi hover vào.">
+															2022-07-30
+														</span>
+													</td>
 												</tr>
 												<tr>
 													<td>2</td>
-													<td>Reader 2</td>
-													<td>Book 2</td>
-													<td>2022-06-30</td>
-													<td>2022-07-30</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nội dung rất dài sẽ hiển thị ở đây khi hover vào.">
+															Reader 2
+														</span>
+													</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nội dung rất dài sẽ hiển thị ở đây khi hover vào.">
+															Book 2
+														</span>
+													</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nội dung rất dài sẽ hiển thị ở đây khi hover vào.">
+															2022-06-30
+														</span>
+													</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nội dung rất dài sẽ hiển thị ở đây khi hover vào.">
+															2022-07-30
+														</span>
+													</td>
 												</tr>
 												<tr>
 													<td>3</td>
-													<td>Reader 3</td>
-													<td>Book 3</td>
-													<td>2022-06-30</td>
-													<td>2022-07-30</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nội dung rất dài sẽ hiển thị ở đây khi hover vào.">
+															Reader 3
+														</span>
+													</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nội dung rất dài sẽ hiển thị ở đây khi hover vào.">
+															Book 3
+														</span>
+													</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nội dung rất dài sẽ hiển thị ở đây khi hover vào.">
+															2022-06-30
+														</span>
+													</td>
+													<td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nội dung rất dài sẽ hiển thị ở đây khi hover vào.">
+															2022-07-30
+														</span>
+													</td>
 												</tr>
 											</tbody>
 										</table>
@@ -371,5 +611,12 @@
 			integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
 			crossorigin="anonymous"
 		></script>
+		<script>
+			// Initialize tooltips
+			var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+			var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+			  return new bootstrap.Tooltip(tooltipTriggerEl)
+			})
+		</script>
 	</body>
 </html>

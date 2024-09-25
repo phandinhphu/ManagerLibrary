@@ -26,6 +26,23 @@
 		/>
 		<link rel="stylesheet" href="./assets/css/grid.css" />
 		<link rel="stylesheet" href="./assets/css/style.css" />
+
+		<style>
+			.text-truncate {
+			  max-width: 150px; /* Adjust the width as needed */
+			}
+
+			.tooltip-inner {
+				font-size: 1.6rem;  /* Tăng kích thước font chữ */
+				padding: 0.8rem;     /* Điều chỉnh khoảng cách */
+			}
+
+			@media (max-width: 63.9375em) {
+				.text-truncate {
+					max-width: 78px; /* Adjust the width as needed */
+				}
+			}
+		</style>
 	</head>
 	<body>
 		<div class="wrapper">
@@ -225,20 +242,38 @@
 											<thead>
 												<tr>
 													<th>STT</th>
-													<th>Tên độc giả</th>
-													<th>Tổng số sách mượn</th>
-													<th>Tổng số sách đã trả</th>
-													<th>Tổng số tiền phạt</th>
-													<th>Thao tác</th>
+													<th>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Tên độc giả">Tên độc giả</span>
+													</th>
+													<th>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Tổng số sách mượn">Tổng số sách mượn</span>
+													</th>
+													<th>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Tổng số sách đã trả">Tổng số sách đã trả</span>
+													</th>
+													<th>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Tổng số sách chưa trả">Tổng số sách chưa trả</span>
+													</th>
+													<th>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Thao tác">Thao tác</span>
+													</th>
 												</tr>
 											</thead>
 											<tbody>
 												<tr>
                                                     <td>1</td>
-                                                    <td>Nguyễn Văn A</td>
-                                                    <td>5</td>
-                                                    <td>3</td>
-                                                    <td>0</td>
+                                                    <td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nguyễn Văn A">Nguyễn Văn A</span>
+													</td>
+                                                    <td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="3">3</span>
+													</td>
+                                                    <td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="2">2</span>
+													</td>
+                                                    <td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="0">0</span>
+													</td>
                                                     <td>
                                                         <button
                                                             class="btn btn--info"
@@ -256,10 +291,18 @@
                                                 </tr>
                                                 <tr>
                                                     <td>2</td>
-                                                    <td>Nguyễn Văn B</td>
-                                                    <td>3</td>
-                                                    <td>2</td>
-                                                    <td>0</td>
+                                                    <td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nguyễn Văn B">Nguyễn Văn B</span>
+													</td>
+                                                    <td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="2">2</span>
+													</td>
+                                                    <td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="0">0</span>
+													</td>
+                                                    <td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="0">0</span>
+													</td>
                                                     <td>
                                                         <button
                                                             class="btn btn--info"
@@ -277,10 +320,18 @@
                                                 </tr>
                                                 <tr>
                                                     <td>3</td>
-                                                    <td>Nguyễn Văn C</td>
-                                                    <td>4</td>
-                                                    <td>3</td>
-                                                    <td>0</td>
+                                                    <td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nguyễn Văn C">Nguyễn Văn C</span>
+													</td>
+                                                    <td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="3">3</span>
+													</td>
+                                                    <td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="3">3</span>
+													</td>
+                                                    <td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="0">0</span>
+													</td>
                                                     <td>
                                                         <button
                                                             class="btn btn--info"
@@ -298,10 +349,18 @@
                                                 </tr>
                                                 <tr>
                                                     <td>4</td>
-                                                    <td>Nguyễn Văn D</td>
-                                                    <td>6</td>
-                                                    <td>4</td>
-                                                    <td>0</td>
+                                                    <td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nguyễn Văn D">Nguyễn Văn D</span>
+													</td>
+                                                    <td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="4">4</span>
+													</td>
+                                                    <td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="4">4</span>
+													</td>
+                                                    <td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="0">0</span>
+													</td>
                                                     <td>
                                                         <button
                                                             class="btn btn--info"
@@ -319,10 +378,18 @@
                                                 </tr>
                                                 <tr>
                                                     <td>5</td>
-                                                    <td>Nguyễn Văn E</td>
-                                                    <td>7</td>
-                                                    <td>5</td>
-                                                    <td>0</td>
+                                                    <td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Nguyễn Văn E">Nguyễn Văn E</span>
+													</td>
+                                                    <td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="5">5</span>
+													</td>
+                                                    <td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="5">5</span>
+													</td>
+                                                    <td>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="0">0</span>
+													</td>
                                                     <td>
                                                         <button
                                                             class="btn btn--info"
@@ -421,11 +488,27 @@
 											<thead>
 												<tr>
 													<th>STT</th>
-													<th>Tên sách</th>
-													<th>Tên tác giả</th>
-													<th>Số lượng mượn sách</th>
-													<th>Trạng thái</th>
-													<th>Tiền phạt</th>
+													<th>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Tên sách">Tên sách</span>
+													</th>
+													<th>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Tên tác giả">Tên tác giả</span>
+													</th>
+													<th>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Số lượng">Số lượng</span>
+													</th>
+													<th>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Ngày mượn">Ngày mượn</span>
+													</th>
+													<th>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Ngày trả">Ngày trả</span>
+													</th>
+													<th>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Trạng thái">Trạng thái</span>
+													</th>
+													<th>
+														<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Tiền phạt">Tiền phạt</span>
+													</th>
 												</tr>
 											</thead>
 											<tbody>
@@ -604,53 +687,113 @@
                         <thead>
                             <tr>
                                 <th>STT</th>
-                                <th>Tên sách</th>
-                                <th>Ngày mượn</th>
-                                <th>Ngày trả</th>
-                                <th>Trạng thái</th>
-                                <th>Tiền phạt</th>
+                                <th>
+									<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Tên sách">Tên sách</span>
+								</th>
+                                <th>
+									<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Ngày mượn">Ngày mượn</span>
+								</th>
+                                <th>
+									<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Ngày trả">Ngày trả</span>
+								</th>
+                                <th>
+									<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Trạng thái">Trạng thái</span>
+								</th>
+                                <th>
+									<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Tiền phạt">Tiền phạt</span>
+								</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>1</td>
-                                <td>Harry Potter</td>
-                                <td>20/10/2021</td>
-                                <td>25/10/2021</td>
-                                <td>Đã trả</td>
-                                <td>0</td>
+                                <td>
+									<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Sách 1">Sách 1</span>
+								</td>
+                                <td>
+									<span class="d-block text-truncate" data-bs-toggle="tooltip" title="25/10/2021">25/10/2021</span>
+								</td>
+                                <td>
+									<span class="d-block text-truncate" data-bs-toggle="tooltip" title="27/10/2021">27/10/2021</span>
+								</td>
+                                <td>
+									<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Đã trả">Đã trả</span>
+								</td>
+                                <td>
+									<span class="d-block text-truncate" data-bs-toggle="tooltip" title="0">0</span>
+								</td>
                             </tr>
                             <tr>
                                 <td>2</td>
-                                <td>Harry Potter</td>
-                                <td>20/10/2021</td>
-                                <td>25/10/2021</td>
-                                <td>Đã trả</td>
-                                <td>0</td>
+                                <td>
+									<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Sách 1">Sách 1</span>
+								</td>
+                                <td>
+									<span class="d-block text-truncate" data-bs-toggle="tooltip" title="25/10/2021">25/10/2021</span>
+								</td>
+                                <td>
+									<span class="d-block text-truncate" data-bs-toggle="tooltip" title="27/10/2021">27/10/2021</span>
+								</td>
+                                <td>
+									<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Đã trả">Đã trả</span>
+								</td>
+                                <td>
+									<span class="d-block text-truncate" data-bs-toggle="tooltip" title="0">0</span>
+								</td>
                             </tr>
                             <tr>
                                 <td>3</td>
-                                <td>Harry Potter</td>
-                                <td>20/10/2021</td>
-                                <td>25/10/2021</td>
-                                <td>Đã trả</td>
-                                <td>0</td>
+                                <td>
+									<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Sách 1">Sách 1</span>
+								</td>
+                                <td>
+									<span class="d-block text-truncate" data-bs-toggle="tooltip" title="25/10/2021">25/10/2021</span>
+								</td>
+                                <td>
+									<span class="d-block text-truncate" data-bs-toggle="tooltip" title="27/10/2021">27/10/2021</span>
+								</td>
+                                <td>
+									<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Đã trả">Đã trả</span>
+								</td>
+                                <td>
+									<span class="d-block text-truncate" data-bs-toggle="tooltip" title="0">0</span>
+								</td>
                             </tr>
                             <tr>
                                 <td>4</td>
-                                <td>Harry Potter</td>
-                                <td>20/10/2021</td>
-                                <td>25/10/2021</td>
-                                <td>Đã trả</td>
-                                <td>0</td>
+                                <td>
+									<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Sách 1">Sách 1</span>
+								</td>
+                                <td>
+									<span class="d-block text-truncate" data-bs-toggle="tooltip" title="25/10/2021">25/10/2021</span>
+								</td>
+                                <td>
+									<span class="d-block text-truncate" data-bs-toggle="tooltip" title="27/10/2021">27/10/2021</span>
+								</td>
+                                <td>
+									<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Đã trả">Đã trả</span>
+								</td>
+                                <td>
+									<span class="d-block text-truncate" data-bs-toggle="tooltip" title="0">0</span>
+								</td>
                             </tr>
                             <tr>
                                 <td>5</td>
-                                <td>Harry Potter</td>
-                                <td>20/10/2021</td>
-                                <td>25/10/2021</td>
-                                <td>Đã trả</td>
-                                <td>0</td>
+                                <td>
+									<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Sách 1">Sách 1</span>
+								</td>
+                                <td>
+									<span class="d-block text-truncate" data-bs-toggle="tooltip" title="25/10/2021">25/10/2021</span>
+								</td>
+                                <td>
+									<span class="d-block text-truncate" data-bs-toggle="tooltip" title="27/10/2021">27/10/2021</span>
+								</td>
+                                <td>
+									<span class="d-block text-truncate" data-bs-toggle="tooltip" title="Đã trả">Đã trả</span>
+								</td>
+                                <td>
+									<span class="d-block text-truncate" data-bs-toggle="tooltip" title="0">0</span>
+								</td>
                             </tr>
                         </tbody>
                     </table>
@@ -680,5 +823,13 @@
 			crossorigin="anonymous"
 		></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+		<script>
+			// Initialize tooltips
+			var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+			var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+			  return new bootstrap.Tooltip(tooltipTriggerEl)
+			})
+		</script>
 	</body>
 </html>

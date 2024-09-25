@@ -25,9 +25,29 @@
 			crossorigin="anonymous"
 		/>
 		<!-- Thêm Select2 CSS -->
-		<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css"
+			rel="stylesheet"
+		/>
 		<link rel="stylesheet" href="./assets/css/grid.css" />
 		<link rel="stylesheet" href="./assets/css/style.css" />
+
+		<style>
+			.text-truncate {
+			  max-width: 150px; /* Adjust the width as needed */
+			}
+
+			.tooltip-inner {
+				font-size: 1.6rem;  /* Tăng kích thước font chữ */
+				padding: 0.8rem;     /* Điều chỉnh khoảng cách */
+			}
+
+			@media (max-width: 63.9375em) {
+				.text-truncate {
+					max-width: 78px; /* Adjust the width as needed */
+				}
+			}
+		</style>
 	</head>
 	<body>
 		<div class="wrapper">
@@ -127,7 +147,7 @@
 											>Manager account</a
 										>
 									</li>
-									 
+
 									<li class="sidebar__sub-item">
 										<a
 											class="sidebar__sub-item-link"
@@ -165,7 +185,7 @@
 									</li>
 								</ul>
 							</li>
-							  
+
 							<li class="sidebar__item">
 								<a
 									class="sidebar__item-link"
@@ -193,7 +213,7 @@
 										<div class="card__header-action">
 											<a
 												class="btn"
-                                                href="./add-book.html"
+												href="./add-book.html"
 											>
 												<i class="fa-solid fa-plus"></i>
 												Add books
@@ -201,136 +221,466 @@
 										</div>
 									</div>
 									<div class="card__body">
-                                        <form class="form__filter" action="">
-                                            <div class="form__filter-group">
-                                                <label for="book_name" class="form__filter-label">Tên sách</label>
-                                                <input type="text" name="book_name" id="book_name" class="form__filter-input">
-                                            </div>
-                                            <div class="form__filter-group">
-                                                <label for="author_name" class="form__filter-label">Tên tác giả</label>
-                                                <input type="text" name="author_name" id="author_name" class="form__filter-input">
-                                            </div>
-                                            <div class="form__filter-group">
-                                                <label for="category" class="form__filter-label" style="width: 90px;">Thể loại</label>
-                                                <select name="category" id="category" class="form__filter-input" multiple="multiple">
-                                                    <option value="1">Adventure</option>
-                                                    <option value="2">Horror</option>
-                                                    <option value="3">Romantic</option>
-                                                </select>
-                                            </div>
-                                            <div class="form__filter-group">
-                                                <label for="publisher_name" class="form__filter-label">Nhà xuất bản</label>
-                                                <input type="text" name="publisher_name" id="publisher_name" class="form__filter-input">
-                                            </div>
-                                            <div class="form__filter-group">
-                                                <label for="code_isbn" class="form__filter-label">Mã ISBN</label>
-                                                <input type="text" name="code_isbn" id="code_isbn" class="form__filter-input">
-                                            </div>
-                                            <div class="form__filter-group">
-                                                <label for="year_published" class="form__filter-label">Năm xuất bản</label>
-                                                <input type="number" name="year_published" id="year_published" class="form__filter-input">
-                                            </div>
-                                            <div class="form__filter-group">
-                                                <button type="submit" class="btn">Tra cứu</button>
-                                            </div>
-                                            <div class="form__filter-group">
-                                                <a href="#" class="btn">Hủy</a>
-                                            </div>
-                                        </form>
+										<form class="form__filter" action="">
+											<div class="form__filter-group">
+												<label
+													for="book_name"
+													class="form__filter-label"
+													>Tên sách</label
+												>
+												<input
+													type="text"
+													name="book_name"
+													id="book_name"
+													class="form__filter-input"
+												/>
+											</div>
+											<div class="form__filter-group">
+												<label
+													for="author_name"
+													class="form__filter-label"
+													>Tên tác giả</label
+												>
+												<input
+													type="text"
+													name="author_name"
+													id="author_name"
+													class="form__filter-input"
+												/>
+											</div>
+											<div class="form__filter-group">
+												<label
+													for="category"
+													class="form__filter-label"
+													style="width: 90px"
+													>Thể loại</label
+												>
+												<select
+													name="category[]"
+													id="category"
+													class="form__filter-input"
+													multiple="multiple"
+												>
+													<option value="1">
+														Adventure
+													</option>
+													<option value="2">
+														Horror
+													</option>
+													<option value="3">
+														Romantic
+													</option>
+												</select>
+											</div>
+											<div class="form__filter-group">
+												<label
+													for="publisher_name"
+													class="form__filter-label"
+													>Nhà xuất bản</label
+												>
+												<input
+													type="text"
+													name="publisher_name"
+													id="publisher_name"
+													class="form__filter-input"
+												/>
+											</div>
+											<div class="form__filter-group">
+												<label
+													for="code_isbn"
+													class="form__filter-label"
+													>Mã ISBN</label
+												>
+												<input
+													type="text"
+													name="code_isbn"
+													id="code_isbn"
+													class="form__filter-input"
+												/>
+											</div>
+											<div class="form__filter-group">
+												<label
+													for="year_published"
+													class="form__filter-label"
+													>Năm xuất bản</label
+												>
+												<input
+													type="number"
+													name="year_published"
+													id="year_published"
+													class="form__filter-input"
+												/>
+											</div>
+											<div class="form__filter-group">
+												<button
+													type="submit"
+													class="btn"
+												>
+													Tra cứu
+												</button>
+											</div>
+											<div class="form__filter-group">
+												<a href="#" class="btn">Hủy</a>
+											</div>
+										</form>
 										<table class="table">
 											<thead>
-                                                <tr>
-                                                    <th>STT</th>
-                                                    <th>Title</th>
-                                                    <th>Author</th>
-                                                    <th>Category</th>
-                                                    <th>Publisher</th>
-                                                    <th>Quantity</th>
-                                                    <th>Actions</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>Harry Potter</td>
-                                                    <td>JK Rowling</td>
-                                                    <td>Adventure</td>
-                                                    <td>Kim Dong</td>
-                                                    <td>10</td>
-                                                    <td>
-                                                        <button class="btn__action">
-                                                            <i class="fa-solid fa-edit"></i>
-                                                        </button>
-                                                        <button class="btn__action">
-                                                            <i class="fa-solid fa-trash"></i>
-                                                        </button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>2</td>
-                                                    <td>Harry Potter</td>
-                                                    <td>JK Rowling</td>
-                                                    <td>Adventure</td>
-                                                    <td>Kim Dong</td>
-                                                    <td>10</td>
-                                                    <td>
-                                                        <button class="btn__action">
-                                                            <i class="fa-solid fa-edit"></i>
-                                                        </button>
-                                                        <button class="btn__action">
-                                                            <i class="fa-solid fa-trash"></i>
-                                                        </button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>3</td>
-                                                    <td>Harry Potter</td>
-                                                    <td>JK Rowling</td>
-                                                    <td>Adventure</td>
-                                                    <td>Kim Dong</td>
-                                                    <td>10</td>
-                                                    <td>
-                                                        <button class="btn__action">
-                                                            <i class="fa-solid fa-edit"></i>
-                                                        </button>
-                                                        <button class="btn__action">
-                                                            <i class="fa-solid fa-trash"></i>
-                                                        </button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>4</td>
-                                                    <td>Harry Potter</td>
-                                                    <td>JK Rowling</td>
-                                                    <td>Adventure</td>
-                                                    <td>Kim Dong</td>
-                                                    <td>10</td>
-                                                    <td>
-                                                        <button class="btn__action">
-                                                            <i class="fa-solid fa-edit"></i>
-                                                        </button>
-                                                        <button class="btn__action">
-                                                            <i class="fa-solid fa-trash"></i>
-                                                        </button>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
+												<tr>
+													<th>STT</th>
+													<th>
+														<span
+															class="d-block text-truncate"
+															data-bs-toggle="tooltip"
+															title="Name book"
+														>
+															Name book
+														</span>
+													</th>
+													<th>
+														<span
+															class="d-block text-truncate"
+															data-bs-toggle="tooltip"
+															title="Author"
+														>
+															Author
+														</span>
+													</th>
+													<th>
+														<span
+															class="d-block text-truncate"
+															data-bs-toggle="tooltip"
+															title="Category"
+														>
+															Category
+														</span>
+													</th>
+													<th>
+														<span
+															class="d-block text-truncate"
+															data-bs-toggle="tooltip"
+															title="Publisher"
+														>
+															Publisher
+														</span>
+													</th>
+													<th>
+														<span
+															class="d-block text-truncate"
+															data-bs-toggle="tooltip"
+															title="Quantity"
+														>
+															Quantity
+														</span>
+													</th>
+													<th>
+														<span
+															class="d-block text-truncate"
+															data-bs-toggle="tooltip"
+															title="Action"
+														>
+															Action
+														</span>
+													</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>1</td>
+													<td>
+														<span
+															class="d-block text-truncate"
+															data-bs-toggle="tooltip"
+															title="Harry Potter"
+														>
+															Harry Potter
+														</span>
+													</td>
+													<td>
+														<span
+															class="d-block text-truncate"
+															data-bs-toggle="tooltip"
+															title="JK Rowling"
+														>
+															JK Rowling
+														</span>
+													</td>
+													<td>
+														<span
+															class="d-block text-truncate"
+															data-bs-toggle="tooltip"
+															title="Adventure"
+														>
+															Adventure
+														</span>
+													</td>
+													<td>
+														<span
+															class="d-block text-truncate"
+															data-bs-toggle="tooltip"
+															title="NXB Kim Đồng"
+														>
+															NXB Kim Đồng
+														</span>
+													</td>
+													<td>
+														<span
+															class="d-block text-truncate"
+															data-bs-toggle="tooltip"
+															title="10"
+														>
+															10
+														</span>
+													</td>
+													<td>
+														<button
+															class="btn__action"
+														>
+															<i
+																class="fa-solid fa-edit"
+															></i>
+														</button>
+														<button
+															class="btn__action"
+														>
+															<i
+																class="fa-solid fa-trash"
+															></i>
+														</button>
+													</td>
+												</tr>
+												<tr>
+													<td>2</td>
+													<td>
+														<span
+															class="d-block text-truncate"
+															data-bs-toggle="tooltip"
+															title="Harry Potter"
+														>
+															Harry Potter
+														</span>
+													</td>
+													<td>
+														<span
+															class="d-block text-truncate"
+															data-bs-toggle="tooltip"
+															title="JK Rowling"
+														>
+															JK Rowling
+														</span>
+													</td>
+													<td>
+														<span
+															class="d-block text-truncate"
+															data-bs-toggle="tooltip"
+															title="Adventure"
+														>
+															Adventure
+														</span>
+													</td>
+													<td>
+														<span
+															class="d-block text-truncate"
+															data-bs-toggle="tooltip"
+															title="NXB Kim Đồng"
+														>
+															NXB Kim Đồng
+														</span>
+													</td>
+													<td>
+														<span
+															class="d-block text-truncate"
+															data-bs-toggle="tooltip"
+															title="10"
+														>
+															10
+														</span>
+													</td>
+													<td>
+														<button
+															class="btn__action"
+														>
+															<i
+																class="fa-solid fa-edit"
+															></i>
+														</button>
+														<button
+															class="btn__action"
+														>
+															<i
+																class="fa-solid fa-trash"
+															></i>
+														</button>
+													</td>
+												</tr>
+												<tr>
+													<td>3</td>
+													<td>
+														<span
+															class="d-block text-truncate"
+															data-bs-toggle="tooltip"
+															title="Harry Potter"
+														>
+															Harry Potter
+														</span>
+													</td>
+													<td>
+														<span
+															class="d-block text-truncate"
+															data-bs-toggle="tooltip"
+															title="JK Rowling"
+														>
+															JK Rowling
+														</span>
+													</td>
+													<td>
+														<span
+															class="d-block text-truncate"
+															data-bs-toggle="tooltip"
+															title="Adventure"
+														>
+															Adventure
+														</span>
+													</td>
+													<td>
+														<span
+															class="d-block text-truncate"
+															data-bs-toggle="tooltip"
+															title="NXB Kim Đồng"
+														>
+															NXB Kim Đồng
+														</span>
+													</td>
+													<td>
+														<span
+															class="d-block text-truncate"
+															data-bs-toggle="tooltip"
+															title="10"
+														>
+															10
+														</span>
+													</td>
+													<td>
+														<button
+															class="btn__action"
+														>
+															<i
+																class="fa-solid fa-edit"
+															></i>
+														</button>
+														<button
+															class="btn__action"
+														>
+															<i
+																class="fa-solid fa-trash"
+															></i>
+														</button>
+													</td>
+												</tr>
+												<tr>
+													<td>4</td>
+													<td>
+														<span
+															class="d-block text-truncate"
+															data-bs-toggle="tooltip"
+															title="Harry Potter"
+														>
+															Harry Potter
+														</span>
+													</td>
+													<td>
+														<span
+															class="d-block text-truncate"
+															data-bs-toggle="tooltip"
+															title="JK Rowling"
+														>
+															JK Rowling
+														</span>
+													</td>
+													<td>
+														<span
+															class="d-block text-truncate"
+															data-bs-toggle="tooltip"
+															title="Adventure"
+														>
+															Adventure
+														</span>
+													</td>
+													<td>
+														<span
+															class="d-block text-truncate"
+															data-bs-toggle="tooltip"
+															title="NXB Kim Đồng"
+														>
+															NXB Kim Đồng
+														</span>
+													</td>
+													<td>
+														<span
+															class="d-block text-truncate"
+															data-bs-toggle="tooltip"
+															title="10"
+														>
+															10
+														</span>
+													</td>
+													<td>
+														<button
+															class="btn__action"
+														>
+															<i
+																class="fa-solid fa-edit"
+															></i>
+														</button>
+														<button
+															class="btn__action"
+														>
+															<i
+																class="fa-solid fa-trash"
+															></i>
+														</button>
+													</td>
+												</tr>
+											</tbody>
 										</table>
 
-                                        <div class="pagination">
-                                            <a href="#" class="pagination__prev">
-                                                <i class="fa fa-arrow-left"></i>
-                                            </a>
-        
-                                            <a href="#" class="pagination__number pagination__number--active">1</a>
-                                            <a href="#" class="pagination__number">2</a>
-                                            <a href="#" class="pagination__number">3</a>
-                                            <a href="#" class="pagination__number">4</a>
-        
-                                            <a href="#" class="pagination__next">
-                                                <i class="fa fa-arrow-right"></i>
-                                            </a>
-                                        </div>
+										<div class="pagination">
+											<a
+												href="#"
+												class="pagination__prev"
+											>
+												<i class="fa fa-arrow-left"></i>
+											</a>
+
+											<a
+												href="#"
+												class="pagination__number pagination__number--active"
+												>1</a
+											>
+											<a
+												href="#"
+												class="pagination__number"
+												>2</a
+											>
+											<a
+												href="#"
+												class="pagination__number"
+												>3</a
+											>
+											<a
+												href="#"
+												class="pagination__number"
+												>4</a
+											>
+
+											<a
+												href="#"
+												class="pagination__next"
+											>
+												<i
+													class="fa fa-arrow-right"
+												></i>
+											</a>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -340,7 +690,10 @@
 					<footer class="footer">
 						<ul class="contact">
 							<li class="contact__item">
-								<a class="contact__item-icon" href="https://github.com/phandinhphu">
+								<a
+									class="contact__item-icon"
+									href="https://github.com/phandinhphu"
+								>
 									<i class="fa-brands fa-github"></i>
 								</a>
 							</li>
@@ -379,11 +732,11 @@
 			crossorigin="anonymous"
 		></script>
 		<script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-        crossorigin="anonymous"
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+			integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+			crossorigin="anonymous"
 		></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 		<!-- Thêm Select2 JS -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
 
@@ -395,7 +748,10 @@
 				}
 
 				// Nếu tìm thấy giá trị trả về
-				if (data.text.toLowerCase().indexOf(params.term.toLowerCase()) > -1) {
+				if (
+					data.text.toLowerCase().indexOf(params.term.toLowerCase()) >
+					-1
+				) {
 					var modifiedData = jQuery.extend({}, data, true);
 					modifiedData.text += " (tìm thấy)";
 					return modifiedData;
@@ -405,14 +761,25 @@
 				return null;
 			}
 
-			jQuery(document).ready(function() {
-				jQuery('#category').select2({
+			jQuery(document).ready(function () {
+				jQuery("#category").select2({
 					placeholder: "Chọn thể loại",
 					allowClear: true,
 					matcher: matchCategory,
 					width: "100%",
-					minimumResultsForSearch: -1
+					minimumResultsForSearch: -1,
 				});
+			});
+		</script>
+		<script>
+			// Initialize tooltips
+			var tooltipTriggerList = [].slice.call(
+				document.querySelectorAll('[data-bs-toggle="tooltip"]')
+			);
+			var tooltipList = tooltipTriggerList.map(function (
+				tooltipTriggerEl
+			) {
+				return new bootstrap.Tooltip(tooltipTriggerEl);
 			});
 		</script>
 	</body>
